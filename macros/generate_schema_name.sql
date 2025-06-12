@@ -5,11 +5,14 @@
     {# seeds go in a global `raw` schema #}
     {% if node.resource_type == 'seed' %}
         {{ custom_schema_name | trim }}
+    
+    {# seeds go in a global `raw` schema #}
+    {% elif custom_schema_name == 'cust' %}
+        {{ custom_schema_name | trim }}
 
     {# non-specified schemas go to the default target schema #}
     {% elif custom_schema_name is none %}
         {{ default_schema }}
-
 
     {# specified custom schema names go to the schema name prepended with the the default schema name in prod (as this is an example project we want the schemas clearly labeled) #}
     {% elif target.name == 'prod' %}
