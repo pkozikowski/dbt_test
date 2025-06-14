@@ -181,3 +181,19 @@ saved_queries:
       - name: order_metrics
         config:
           export_as: table
+exposures:
+
+  - name: weekly_jaffle_metrics
+    label: Jaffles by the Week
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('orders')
+      - ref('products')
+    owner:
+      name: PK
+      email: pawel.kozikowski@gmail.com
