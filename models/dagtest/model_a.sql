@@ -1,6 +1,7 @@
 {{
     config(
-        group='dagtest'
+        group='dagtest',
+        store_failures=true
     )
 }}
 SELECT
