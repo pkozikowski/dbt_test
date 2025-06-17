@@ -1,0 +1,1 @@
+select tax_paid_cents from {{ ref('orders') }} where tax_paid_cents < 0

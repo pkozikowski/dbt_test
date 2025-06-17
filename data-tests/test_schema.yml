@@ -1,0 +1,4 @@
+version: 2
+data_tests:
+  - name: orders
+    description: the test for orders table  

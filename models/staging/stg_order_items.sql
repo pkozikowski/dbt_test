@@ -1,3 +1,12 @@
+{{
+    config(
+        tags = 't1'
+    )
+}}
+
+{% set payment_methods = ["test"] %}
+
+
 with
 
 source as (

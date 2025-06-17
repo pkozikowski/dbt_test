@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: orders     # This is the source name
+    schema: DBT_PKOZIKOWSKI 
+    tables:
+      - name: orders          # This is the table name

@@ -26,7 +26,7 @@ vars:
 
 seeds:
   jaffle_shop:
-    +schema: raw
+    +schema: DBT_PKOZIKOWSKI
     jaffle-data:
       +enabled: "{{ var('load_source_data', false) }}"
 
@@ -36,3 +36,9 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    dagtest:
+      groups:
+          name: dagtest
+          owner:
+              email: pawel.kozikowski@gmail.com
+

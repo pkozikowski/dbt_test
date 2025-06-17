@@ -1,0 +1,5 @@
+selectors:
+  - name: nodes_to_joy
+    definition: 
+      method: tag
+      value: monthly
