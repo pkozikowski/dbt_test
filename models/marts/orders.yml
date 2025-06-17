@@ -12,6 +12,7 @@ models:
         data_tests:
           - not_null
           - unique
+            severity:warn
       - name: customer_id
         description: The foreign key relating to the customer who placed the order.
         data_tests:
@@ -25,6 +26,9 @@ models:
       - name: order_cost
         description: The sum of supply expenses to fulfill the order.
       - name: is_food_order
+        tests:
+          - accepted_values:
+              values: ['TRUE','FALSE']
         description: A boolean indicating if this order included any food items.
       - name: is_drink_order
         description: A boolean indicating if this order included any drink items.

@@ -23,7 +23,8 @@ customer_orders_summary as (
         max(orders.ordered_at) as last_ordered_at,
         sum(orders.subtotal) as lifetime_spend_pretax,
         sum(orders.tax_paid) as lifetime_tax_paid,
-        sum(orders.order_total) as lifetime_spend
+        sum(orders.order_total) as lifetime_spend,
+        sum(orders.tax_paid)+sum(orders.tax_paid) as overal_sum
 
     from orders
 

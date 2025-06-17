@@ -2,7 +2,7 @@ semantic_models:
   #The name of the semantic model.
   - name: products
     description: |
-      Product dimension table. The grain of the table is one row per product.
+      Product dimension table. The grain of the table is one row per product.    
     #The name of the dbt model and schema
     model: ref('products')
     #Entities. These usually corespond to keys in the table.
@@ -24,3 +24,4 @@ semantic_models:
         type: categorical
       - name: product_price
         type: categorical
+       

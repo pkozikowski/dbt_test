@@ -7,7 +7,7 @@ models:
         data_tests:
           - not_null
           - unique
-
+          - my_custom_test_ng
 unit_tests:
   - name: test_does_location_opened_at_trunc_to_date
     description: "Check that opened_at timestamp is properly truncated to a date."
