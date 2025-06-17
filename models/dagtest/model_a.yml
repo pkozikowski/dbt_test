@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: model_a
+    latest_version: 1
+    tests:
+      - dbt_utils.unique_combination_of_columns: 
+              combination_of_columns: 
+                - EMPLOYEE_ID
+                - CUSTOMER_ID
+    config:
+      +group: MYGRP
+      access: protected
+    versions:
+      - v: 1
+        config:
+          materialized: view
+      - v: 2
+        config:
+          materialized: table

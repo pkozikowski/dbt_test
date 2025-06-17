@@ -4,4 +4,4 @@ sources:
   - name: public_b
     schema: PROD 
     tables:
-      - name: ORDERS
+      - name: ORDERS    

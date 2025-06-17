@@ -9,7 +9,7 @@
 {%- endmacro %}
 
 {% macro postgres__cents_to_dollars(column_name) -%}
-    ({{ column_name }}::numeric(16, 2) / 100)
+    ({{ column_name }}::numeric(32, 2) / 100)
 {%- endmacro %}
 
 {% macro bigquery__cents_to_dollars(column_name) %}

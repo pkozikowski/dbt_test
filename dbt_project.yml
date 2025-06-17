@@ -36,3 +36,9 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    dagtest:
+      groups:
+          name: dagtest
+          owner:
+              email: pawel.kozikowski@gmail.com
+
