@@ -1,6 +1,6 @@
 {{
     config(
-        materialized='incremental'  if target.name == 'dev' else 'view',
+        materialized='incremntal'  if target.name == 'dev' else 'view',
         group = 'dagtest'
     )
 }}

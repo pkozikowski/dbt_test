@@ -1,7 +1,8 @@
 {{
     config(
         materialized='view',
-        group='dagtest'
+        group='dagtest',
+        alias='model_cc'
     )
 }}
 

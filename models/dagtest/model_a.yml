@@ -2,12 +2,19 @@ version: 2
 
 models:
   - name: model_a
-    latest_version: 1
-    tests:
-      - dbt_utils.unique_combination_of_columns: 
+    description: "Hello hello tu moda"
+    latest_version: 2
+    tests:    
+      
+        - dbt_utils.unique_combination_of_columns: 
               combination_of_columns: 
                 - EMPLOYEE_ID
-                - CUSTOMER_ID
+                - CUSTOMER_ID  
+      
+    columns:
+       - name: EMPLOYEE_ID
+         tests: 
+           - not_null                      
     config:
       +group: MYGRP
       access: protected
@@ -15,6 +22,8 @@ models:
       - v: 1
         config:
           materialized: view
+          defined_in: model_a_v1.sql
       - v: 2
         config:
+          defined_in: model_a_v2.sql
           materialized: table

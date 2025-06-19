@@ -71,6 +71,8 @@ semantic_models:
 
 metrics:
   - name: lifetime_spend_pretax
+    config:
+      enabled: true
     description: Customer's lifetime spend before tax
     label: LTV Pre-tax
     type: simple
