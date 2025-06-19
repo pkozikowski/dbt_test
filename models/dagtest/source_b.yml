@@ -4,4 +4,9 @@ sources:
   - name: public_b
     schema: PROD 
     tables:
-      - name: ORDERS    
+      - name: ORDERS  
+        columns:
+          - name: ORDER_ID
+            tests:
+              - not_null
+              - unique
